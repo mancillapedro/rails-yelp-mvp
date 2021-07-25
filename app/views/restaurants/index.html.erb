@@ -1,1 +1,13 @@
-index.html.erb
+<h1>Index</h1>
+
+
+<div class="container">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card">
+      <p><%= restaurant.name %></p>
+      <p><%= link_to "Show", restaurant_path(restaurant) %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New", new_restaurant_path %>

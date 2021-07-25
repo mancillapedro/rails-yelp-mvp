@@ -1,1 +1,11 @@
-show.html.erb
+<h1>Show</h1>
+
+<div class="card">
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+</div>
+<%= link_to '#index', restaurants_path %>
+<%= link_to '#edit', edit_restaurant_path(@restaurant) %>
+<%= link_to '#delete', restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" } %>
