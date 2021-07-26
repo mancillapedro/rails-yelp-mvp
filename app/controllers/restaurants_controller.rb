@@ -20,7 +20,9 @@ class RestaurantsController < ApplicationController
 
   def edit; end
 
-  def show; end
+  def show
+    @review = Review.new
+  end
 
   def update
     if @restaurant.update(restaurant_params)
