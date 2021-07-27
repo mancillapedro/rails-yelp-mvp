@@ -20,10 +20,14 @@
     </div>
   <% end %>
 </div>
+
+<%= render "reviews/form" %>
+
+<!--
 <%= simple_form_for [ @restaurant, @review ] do |f| %>
   <%= f.input :rating %>
   <%= f.input :content %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
 <% end %>
-
+-->
 
